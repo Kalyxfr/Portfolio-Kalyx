@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberDev Portfolio | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <div class="loading-screen">
+        <div class="loading-content">
+            <h2 class="glitch" data-text="CONNEXION EN COURS...">CONNEXION EN COURS...</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p class="loading-text">Préparation d’un canal sécurisé...</p>
+        </div>
+    </div>
+
+    <div class="noise-overlay"></div>
+    
+    <header>
+        <div class="logo">
+            <span class="cyber-text">CYBER</span><span class="dev-text">DEV</span>
+        </div>
+        <nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                <li><a href="projects.html" class="nav-link">Projets</a></li>
+                <li class="active"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h1 class="glitch" data-text="CONTACT">CONTACT</h1>
+            <div class="header-line"></div>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <div class="section-header">
+                    <h2 class="cyber-heading">PRENDRE <span class="accent">CONTACT</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <p>Je suis toujours ouvert aux nouvelles opportunités, projets stimulants, et aux échanges avec d'autres passionnés de cybersécurité et développeurs.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>altox1597@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Localisation</h3>
+                            <p>France</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Réseaux</h3>
+                            <div class="contact-social">
+                                <a href="https://github.com/Kalyxfr" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/kalyx-fr-6286ab355/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://x.com/Kalyx_code" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="availability">
+                    <h3>Disponibilité actuelle</h3>
+                    <div class="availability-status">
+                        <span class="status-indicator available"></span>
+                        <span class="status-text">Disponible pour de nouveaux projets</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="section-header">
+                    <h2 class="cyber-heading">ENVOYER UN <span class="accent">MESSAGE</span></h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <div class="form-control">
+                            <input type="text" id="name" required>
+                            <label for="name">Votre nom</label>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-control">
+                            <input type="email" id="email" required>
+                            <label for="email">Votre email</label>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-control">
+                            <input type="text" id="subject" required>
+                            <label for="subject">Sujet</label>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-control textarea">
+                            <textarea id="message" required></textarea>
+                            <label for="message">Votre message</label>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Envoyer le message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="form-success-message">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message envoyé avec succès !</h3>
+                    <p>Merci de m’avoir contacté. Je vous répondrai dès que possible.</p>
+                    <button class="btn btn-primary" id="sendAnotherBtn">Envoyer un autre message</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <div class="section-header">
+                <h2 class="cyber-heading">QUESTIONS <span class="accent">FRÉQUENTES</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels types de projets réalises-tu ?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Je suis spécialisé dans les projets liés à la cybersécurité, notamment le développement d'applications sécurisées, les audits, les tests d'intrusion, et la création d'outils personnalisés. Je réalise aussi des projets full-stack avec une approche centrée sur la sécurité.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposes-tu des services de consulting ?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, je propose des services de conseil en cybersécurité pour tous types d’organisations. Cela inclut des évaluations de sécurité, des formations au développement sécurisé, et la mise en place de bonnes pratiques.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est ton délai moyen pour un projet ?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tout dépend de la complexité. Les petits projets prennent 2 à 6 semaines, les gros jusqu'à 6 mois. La qualité et la sécurité sont toujours prioritaires.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment gères-tu la confidentialité ?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La confidentialité est essentielle. Je signe des accords de non-divulgation (NDA) et applique des protocoles de sécurité stricts pour protéger toutes les données et informations de mes clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="cyber-text">CYBER</span><span class="dev-text">DEV</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="skills.html">Compétences</a>
+                <a href="projects.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Kalyxfr" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kalyx-fr-6286ab355/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Kalyx_code" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kalyx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio CyberDev | Projets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="loading-screen">
+        <div class="loading-content">
+            <h2 class="glitch" data-text="ACCÈS AUX PROJETS...">ACCÈS AUX PROJETS...</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p class="loading-text">Déchiffrement des données des projets...</p>
+        </div>
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <header>
+        <div class="logo">
+            <span class="cyber-text">CYBER</span><span class="dev-text">DEV</span>
+        </div>
+        <nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                <li class="active"><a href="projects.html" class="nav-link">Projets</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="glitch" data-text="PROJETS">PROJETS</h1>
+            <div class="header-line"></div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                <button class="filter-btn" data-filter="security">Sécurité</button>
+                <button class="filter-btn" data-filter="development">Développement</button>
+                <button class="filter-btn" data-filter="automation">Automatisation</button>
+            </div>
+        </section>
+
+        <section class="projects-grid-container">
+            <div class="projects-full-grid">
+                <!-- Projet 1 -->
+                <div class="project-item" data-category="security" id="project1">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/11035359/pexels-photo-11035359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="GeoLocateR">
+                    </div>
+                    <div class="project-content">
+                        <h3>GeoLocateR</h3>
+                        <div class="project-tags">
+                            <span class="tag">Sécurité</span>
+                            <span class="tag">Ip</span>
+                        </div>
+                        <p>GeoLocateR 🌍 est une application simple et rapide pour déterminer la géolocalisation d'une adresse IP. 🚀</p>
+                        <div class="project-features">
+                            <h4>Fonctionnalités principales :</h4>
+                            <ul>
+                                <li>Obtenez des informations détaillées sur le pays, la région, la ville, la latitude et la longitude. 📊</li>
+                                <li>Interface conviviale et facile à utiliser. 👥</li>
+                                <li>Rapidité et précision des résultats. ⏱️</li>
+                                <li>Idéal pour une utilisation personnelle ou professionnelle. 🏢</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Technologies :</h4>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>Javva</span>
+                                <span>C##</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kalyxfr/GeoLocateR-/releases/download/v1.0/GeoLocateR.exe" class="btn btn-small"><i class="fas fa-external-link-alt"></i> Télécharger</a>
+                            <a href="https://github.com/Kalyxfr/GeoLocateR-/archive/refs/tags/v1.0.zip" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-item" data-category="security" id="project2">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/106341/pexels-photo-106341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="SintCrawl">
+                    </div>
+                    <div class="project-content">
+                        <h3>SintCrawl</h3>
+                        <div class="project-tags">
+                            <span class="tag">OSINT</span>
+                            <span class="tag">Crawler</span>
+                        </div>
+                        <p>Ce projet permet de réaliser des recherches OSINT (Open Source Intelligence) sur un site web en explorant ses pages.</p>
+                        <div class="project-features">
+                            <h4>Fonctionnalités principales :</h4>
+                            <ul>
+                                <li>📧 Extraction d’e-mails : Trouve toutes les adresses e-mail présentes sur le site.</li>
+                                <li>🌍 Sous-domaines : Récupère les sous-domaines associés au domaine du site.</li>
+                                <li>🔗 Liens internes : Parcours tous les liens internes du site pour une exploration approfondie.</li>
+                                <li>🖼️ URLs des images : Capture les URLs des images présentes sur le site.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Technologies :</h4>
+                            <div class="tech-stack">
+                                <span>JavaScript</span>
+                                <span>Node.js</span>
+                                <span>WebCrypto API</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kalyxfr/SintCrawl/releases/download/1.0/SintCrawl.exe" class="btn btn-small"><i class="fas fa-external-link-alt"></i> Télécharger</a>
+                            <a href="https://github.com/Kalyxfr/SintCrawl/archive/refs/tags/1.0.zip" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 3 -->
+<div class="project-item" data-category="development" id="project3">
+    <div class="project-image">
+        <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="MetaNet">
+    </div>
+    <div class="project-content">
+        <h3>MetaNet</h3>
+        <div class="project-tags">
+            <span class="tag">Développement</span>
+            <span class="tag">Données</span>
+        </div>
+        <p>MetaNet est un outil puissant et intuitif conçu pour explorer et gérer les métadonnées de vos réseaux et systèmes.</p>
+        <div class="project-features">
+            <h4>Fonctionnalités principales :</h4>
+            <ul>
+                <li>🔍 Obtention de l’adresse IPv4 locale : Utilisez notre module pour obtenir facilement votre adresse IP locale.</li>
+                <li>🌐 Obtention de l’adresse IP publique : Découvrez votre adresse IP publique avec une simple requête.</li>
+                <li>📍 Géolocalisation : Obtenez des informations précises sur votre localisation géographique basée sur votre IP.</li>
+                <li>🖥️ Informations système : Récupérez des informations détaillées sur votre système d’exploitation, sa version, et le nom de l’ordinateur.</li>
+            </ul>
+        </div>
+        <div class="project-tech">
+            <h4>Technologies :</h4>
+            <div class="tech-stack">
+                <span>Java</span>
+                <span>Javascript</span>
+                <span>C++</span>
+                <span>Python</span>
+            </div>
+        </div>
+        <div class="project-links">
+            <a href="#" class="btn btn-small"><i class="fas fa-external-link-alt"></i> Voir la démo</a>
+            <a href="https://github.com/Kalyxfr/-MetaNet---L-Explorateur-Ultime-des-M-tadonn-es-/archive/refs/tags/v1.0.zip" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code source</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-item" data-category="development" id="project5">
+    <div class="project-image">
+        <img src="https://github.com/Kalyxfr/Malware-Blog-image/blob/main/CyberMalwareX%20Blog.png?raw=true" alt="Malware-Blog-image">
+    </div>
+    <div class="project-content">
+        <h3>Malware-Blog</h3>
+        <div class="project-tags">
+            <span class="tag">Développement</span>
+            <span class="tag">Web</span>
+        </div>
+        <p>Bienvenue sur Malware blog le blog ultime des Hackeur</p>
+        <div class="project-features">
+            <h4>Fonctionnalités principales :</h4>
+            <ul>
+                <li>Interface admin intuitive et réactive</li>
+                <li>Support Markdown et éditeur WYSIWYG</li>
+                <li>Gestion des utilisateurs et des permissions</li>
+                <li>Architecture modulaire extensible</li>
+            </ul>
+        </div>
+        <div class="project-tech">
+            <h4>Technologies :</h4>
+            <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Javascript</span>
+            </div>
+        </div>
+        <div class="project-links">
+            <a href="https://kalyxfr.github.io/Malware-Blog/" class="btn btn-small"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+            <a href="https://github.com/Kalyxfr/Malware-Blog/archive/refs/heads/main.zip" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code source</a>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="cyber-text">CYBER</span><span class="dev-text">DEV</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="skills.html">Compétences</a>
+                <a href="projects.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Kalyxfr" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kalyx-fr-6286ab355/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Kalyx_code" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kalyx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>

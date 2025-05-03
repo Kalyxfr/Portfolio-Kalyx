@@ -1,0 +1,754 @@
+.glitch {
+  position: relative;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: var(--accent-blue);
+  z-index: -1;
+  animation: glitch-effect 3s infinite;
+}
+
+.glitch::after {
+  color: var(--accent-green);
+  z-index: -2;
+  animation: glitch-effect 2s infinite reverse;
+}
+
+@keyframes glitch-effect {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.typing {
+  overflow: hidden;
+  border-right: 0.15em solid var(--accent-blue);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-blue) }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stagger-fade-in.visible {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.neon-glow {
+  text-shadow: 
+    0 0 5px rgba(0, 174, 255, 0.5),
+    0 0 10px rgba(0, 174, 255, 0.3),
+    0 0 15px rgba(0, 174, 255, 0.1);
+  animation: neon-pulse 2s infinite alternate;
+}
+
+.neon-glow-green {
+  text-shadow: 
+    0 0 5px rgba(0, 255, 140, 0.5),
+    0 0 10px rgba(0, 255, 140, 0.3),
+    0 0 15px rgba(0, 255, 140, 0.1);
+  animation: neon-pulse-green 2s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 
+      0 0 5px rgba(0, 174, 255, 0.5),
+      0 0 10px rgba(0, 174, 255, 0.3),
+      0 0 15px rgba(0, 174, 255, 0.1);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(0, 174, 255, 0.7),
+      0 0 20px rgba(0, 174, 255, 0.5),
+      0 0 30px rgba(0, 174, 255, 0.3);
+  }
+}
+
+@keyframes neon-pulse-green {
+  from {
+    text-shadow: 
+      0 0 5px rgba(0, 255, 140, 0.5),
+      0 0 10px rgba(0, 255, 140, 0.3),
+      0 0 15px rgba(0, 255, 140, 0.1);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(0, 255, 140, 0.7),
+      0 0 20px rgba(0, 255, 140, 0.5),
+      0 0 30px rgba(0, 255, 140, 0.3);
+  }
+}
+
+.digital-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.digital-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(0, 174, 255, 0.1) 50%, 
+    transparent 100%);
+  animation: digital-rain-fall 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes digital-rain-fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.scan-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-lines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 174, 255, 0.1) 51%,
+    transparent 52%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+.circuit-border {
+  position: relative;
+}
+
+.circuit-border::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    linear-gradient(90deg, var(--background-dark) 9px, transparent 1%) center,
+    linear-gradient(var(--background-dark) 9px, transparent 1%) center,
+    var(--accent-blue);
+  background-size: 10px 10px;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: circuit-animate 10s linear infinite;
+}
+
+@keyframes circuit-animate {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, 40px 40px;
+  }
+}
+
+.page-transition {
+  animation: page-fade-in 0.8s ease forwards;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillBarFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-percent);
+  }
+}
+
+@keyframes loadingProgress {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 15%;
+  }
+  25% {
+    width: 35%;
+  }
+  50% {
+    width: 65%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.data-process {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-process::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 174, 255, 0.2),
+    transparent
+  );
+  animation: data-process 2s linear infinite;
+}
+
+@keyframes data-process {
+  to {
+    left: 100%;
+  }
+}
+
+.hacking-text {
+  position: relative;
+  display: inline-block;
+}
+
+.hacking-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--accent-blue);
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.radar-scan {
+  position: relative;
+  overflow: hidden;
+}
+
+.radar-scan::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    rgba(0, 174, 255, 0.2) 0deg,
+    transparent 30deg
+  );
+  animation: radar-rotate 4s linear infinite;
+  transform-origin: center;
+  z-index: -1;
+}
+
+@keyframes radar-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.electricity {
+  position: relative;
+}
+
+.electricity::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 20%,
+    rgba(0, 174, 255, 0.2) 30%,
+    rgba(0, 255, 140, 0.3) 50%,
+    rgba(0, 174, 255, 0.2) 70%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  animation: electricity-flow 2s linear infinite;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+@keyframes electricity-flow {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.flicker {
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.5;
+  }
+}
+
+.binary-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.binary-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='0' y='10' font-family='monospace' font-size='10' fill='rgba(0, 174, 255, 0.1)'%3E01011001010%3C/text%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10' fill='rgba(0, 174, 255, 0.1)'%3E10100101010%3C/text%3E%3Ctext x='20' y='30' font-family='monospace' font-size='10' fill='rgba(0, 174, 255, 0.1)'%3E01011001010%3C/text%3E%3Ctext x='30' y='40' font-family='monospace' font-size='10' fill='rgba(0, 174, 255, 0.1)'%3E10100101010%3C/text%3E%3Ctext x='0' y='50' font-family='monospace' font-size='10' fill='rgba(0, 174, 255, 0.1)'%3E01011001010%3C/text%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: -1;
+  animation: binary-scroll 20s linear infinite;
+}
+
+@keyframes binary-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1000px;
+  }
+}
+
+.reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-blue);
+  transform: translateX(-100%);
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.rotate-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.rotate-3d:hover {
+  transform: rotateY(180deg);
+}
+
+.image-glitch {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-glitch img {
+  position: relative;
+  z-index: 1;
+}
+
+.image-glitch::before,
+.image-glitch::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 2;
+}
+
+.image-glitch::before {
+  transform: translateX(-10px);
+  background-color: rgba(0, 174, 255, 0.3);
+  animation: glitch-anim-1 2s infinite linear alternate;
+}
+
+.image-glitch::after {
+  transform: translateX(10px);
+  background-color: rgba(0, 255, 140, 0.3);
+  animation: glitch-anim-2 3s infinite linear alternate;
+}
+
+@keyframes glitch-anim-1 {
+  0%, 90% {
+    opacity: 0;
+  }
+  10%, 30%, 50%, 70% {
+    opacity: 0.3;
+  }
+  20%, 40%, 60%, 80% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0%, 70% {
+    opacity: 0;
+  }
+  10%, 30%, 50% {
+    opacity: 0.3;
+  }
+  20%, 40%, 60% {
+    opacity: 0;
+  }
+}
+
+.terminal-typing::after {
+  content: '|';
+  animation: terminal-cursor 1s infinite step-end;
+}
+
+@keyframes terminal-cursor {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.cyber-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cyber-btn:hover::before {
+  left: 100%;
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 174, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 174, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 174, 255, 0);
+  }
+}
+
+.circuit-line {
+  position: relative;
+}
+
+.circuit-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  animation: circuit-line 3s linear infinite;
+}
+
+@keyframes circuit-line {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.hologram {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent 0px, 
+    rgba(0, 174, 255, 0.05) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.data-lines {
+  position: relative;
+}
+
+.data-lines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 50%, var(--accent-blue) 50%),
+    linear-gradient(transparent 50%, var(--accent-green) 50%);
+  background-size: 20px 2px, 2px 20px;
+  opacity: 0.1;
+  animation: data-lines 10s linear infinite;
+}
+
+@keyframes data-lines {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 40px;
+  }
+}
+
+.cyber-shadow {
+  box-shadow: 
+    0 0 10px rgba(0, 174, 255, 0.3),
+    0 0 20px rgba(0, 174, 255, 0.1);
+  animation: shadow-pulse 3s infinite alternate;
+}
+
+@keyframes shadow-pulse {
+  from {
+    box-shadow: 
+      0 0 10px rgba(0, 174, 255, 0.3),
+      0 0 20px rgba(0, 174, 255, 0.1);
+  }
+  to {
+    box-shadow: 
+      0 0 15px rgba(0, 174, 255, 0.5),
+      0 0 30px rgba(0, 174, 255, 0.2);
+  }
+}
+
+.loading-dots::after {
+  content: '';
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
+
+@media screen and (max-width: 768px) {
+  .glitch::before,
+  .glitch::after {
+    display: none;
+  }
+  
+  .scan-lines::after,
+  .digital-rain::before,
+  .circuit-border::before,
+  .radar-scan::before,
+  .binary-bg::before,
+  .data-lines::after {
+    display: none;
+  }
+}
